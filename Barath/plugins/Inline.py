@@ -6,6 +6,7 @@ from Barath import MODULE, bot, INFO as GET_INFO
 from Barath.helpers.help_func import spacebin
 from pyrogram import filters
 from Barath.plugins.alive import alive
+from config import OWNER_ID, HANDLER
 from pyrogram.types import (
     InlineQueryResultArticle,
     InputTextMessageContent,
@@ -18,12 +19,9 @@ from pyrogram.types import (
 
 from itertools import zip_longest
 
-@bot.on_inline_query(filters.regex("help"))
-async def help_cmds(_, inline_query):
+@barath.on_message(filters.command("help", HANDLER) & filters.me)
+async def help_cmds(client, message):
     user_id = (await GET_INFO.barath()).id
-    if not inline_query.from_user.id == user_id:
-        return
-
     buttons = [
         [InlineKeyboardButton(x['module'], callback_data=f"help:{x['module']}")]
         for x in MODULE
@@ -87,14 +85,14 @@ async def alive_inline(_, inline_query):
     buttons = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("💫 𝗝𝗢𝗜𝗡 ✨", url="https://t.me/botupdatex"),
+                InlineKeyboardButton("💫 𝗝𝗢𝗜𝗡 ✨", url="https://t.me/NAMIKAZECPAN"),
             ],
             [
-                InlineKeyboardButton("🌝 𝗗𝗘𝗩'𝗦", url="https://t.me/Sexy_Dark"),
-                InlineKeyboardButton("🌝 𝗗𝗘𝗩'𝗦", url="https://t.me/Siamkira"),
+                InlineKeyboardButton("🌝 𝗗𝗘𝗩'𝗦", url="https://t.me/ISHIKKI_AKIRA"),
+                InlineKeyboardButton("🌝 𝗗𝗘𝗩'𝗦", url="https://t.me/ISHIKKI_AKIRA"),
             ],
             [
-                InlineKeyboardButton("❄️ 𝗢𝗪𝗡𝗘𝗥", url="https://t.me/tobiix"),
+                InlineKeyboardButton("❄️ 𝗢𝗪𝗡𝗘𝗥", url="https://t.me/ISHIKKI_AKIRA"),
             ],
         ]
     )
@@ -107,7 +105,7 @@ async def alive_inline(_, inline_query):
                 title="🤖 Bot Status",
                 caption=ALIVE_TEXT,  # Use caption for text content
                 photo_url=photo_url,
-                thumb_url="https://graph.org/file/b136511bda43b1d8db7d2.jpg",
+                thumb_url="https://telegra.ph/file/238e0440a67c12acb3488.jpg",
                 reply_markup=buttons,
             )
         ]
