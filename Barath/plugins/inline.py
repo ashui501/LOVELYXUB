@@ -87,14 +87,14 @@ async def alive_inline(_, inline_query):
     buttons = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("💫 𝗝𝗢𝗜𝗡 ✨", url="https://t.me/botupdatex"),
+                InlineKeyboardButton("💫 𝗝𝗢𝗜𝗡 ✨", url="https://t.me/NAMIKAZECPAN"),
             ],
             [
-                InlineKeyboardButton("🌝 𝗗𝗘𝗩'𝗦", url="https://t.me/Sexy_Dark"),
-                InlineKeyboardButton("🌝 𝗗𝗘𝗩'𝗦", url="https://t.me/Siamkira"),
+                InlineKeyboardButton("🌝 𝗗𝗘𝗩'𝗦", url="https://t.me/ISHIKKI_AKIRA"),
+                InlineKeyboardButton("🌝 𝗗𝗘𝗩'𝗦", url="https://t.me/ISHIKKI_AKIRA"),
             ],
             [
-                InlineKeyboardButton("❄️ 𝗢𝗪𝗡𝗘𝗥", url="https://t.me/tobiix"),
+                InlineKeyboardButton("❄️ 𝗢𝗪𝗡𝗘𝗥", url="https://t.me/ISHIKKI_AKIRA"),
             ],
         ]
     )
@@ -107,7 +107,7 @@ async def alive_inline(_, inline_query):
                 title="🤖 Bot Status",
                 caption=ALIVE_TEXT,  # Use caption for text content
                 photo_url=photo_url,
-                thumb_url="https://graph.org/file/b136511bda43b1d8db7d2.jpg",
+                thumb_url="https://te.legra.ph/file/e95048a6813968128e6a4.jpg",
                 reply_markup=buttons,
             )
         ]
